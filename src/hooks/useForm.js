@@ -9,7 +9,8 @@ export default function useForm(callback) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    callback();
+    callback()
+    setValues({});
   }
   return {
     values,
