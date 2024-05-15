@@ -1,0 +1,76 @@
+.StudentList {
+  padding-inline-start: 1em;
+}
+
+.StudentList h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.StudentList ol {
+  padding: 0;
+  margin-block-start: 1em;
+}
+
+.StudentList li {
+  display: flex;
+  gap: 1em;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+  width: 95%;
+  border-bottom: 1px solid;
+  padding-block-end: 0.7em;
+  p {
+    border: 1px solid;
+    width: 30%;
+    text-align: center;
+    padding-inline: 0.2em;
+  }
+  button {
+    padding: 6px;
+    :hover {
+      transform: none;
+    }
+  }
+}
+
+.StudentForm {
+  margin-top: 2em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.StudentForm fieldset {
+  width: 300px;
+  padding: 10px;
+}
+
+.StudentForm label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.StudentForm select {
+  width: min(250px, 80%);
+  padding: 8px;
+  margin-bottom: 10px;
+  appearance: none;
+  border: 0.5px solid grey;
+  outline-color: #0056b3;
+  border-radius: 5px;
+}
+
+.StudentForm button {
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  width: fit-content;
+}
+
+.StudentForm button:hover {
+  background-color: #0056b3;
+}
