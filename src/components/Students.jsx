@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { useSelector, useDispatch } from "react-redux";
+import useForm from "../hooks/useForm";
 import { addSubject, removeSubject, selectMentor } from "../features/student/studentSlice";
 import {Button, createTheme, ThemeProvider } from '@mui/material';
 import DeleteIcon from '@mui/icons-material/Delete';
@@ -9,7 +10,7 @@ import '../styles/students.css';
 
 export const Students = () => {
   const { value: subjects, name, mentor } = useSelector((state) => state.student);
-  const [student, setStudent] = useState({});
+  const { values: student, handleChange, handleSubmit } = useForm(handleAddSubject);
   const dispatch = useDispatch();
   const { theme, toggleTheme } = useContext(ThemeContext);
 
@@ -17,17 +18,8 @@ export const Students = () => {
     dispatch(selectMentor(e.target.value))
   }
 
-  function handleChange(e) {
-    setStudent(prev => ({
-      ...prev,
-      [e.target.name]: e.target.value,
-    }))
-  }
-
-  function handleSubmit(e) {
-    e.preventDefault();
-    dispatch(addSubject(student));
-    setStudent({});
+  function handleAddSubject() {
+    dispatch(addSubject(student))
   }
 
   function handleRemoveSubject(value) {
