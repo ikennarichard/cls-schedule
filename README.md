@@ -1,6 +1,6 @@
-# Class Scheduler
+# Class Schedule
 
-Class Scheduler allows you to easily select your subjects for the new term, choose your preferred subjects, and allocate the most convenient time slots for each class. Whether you're an early bird or a night owl, our app ensures that you have the flexibility to create a schedule that fits your lifestyle.
+Class Schedule allows you to easily select your subjects for the new term, choose your preferred subjects, and allocate the most convenient time slots for each class. Whether you're an early bird or a night owl, our app ensures that you have the flexibility to create a schedule that fits your lifestyle.
 
 > Live demo [_here_](https://cls-schedule.netlify.app/).
 
