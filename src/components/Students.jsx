@@ -15,15 +15,15 @@ export const Students = () => {
   const { theme, toggleTheme } = useContext(ThemeContext);
 
   function handleSelectMentor(e) {
-    dispatch(selectMentor(e.target.value))
+    dispatch(selectMentor(e.target.value));
   }
 
   function handleAddSubject() {
-    dispatch(addSubject(student))
+    dispatch(addSubject(student));
   }
 
   function handleRemoveSubject(value) {
-    dispatch(removeSubject(value))
+    dispatch(removeSubject(value));
   }
 
   const buttonTheme = createTheme({
