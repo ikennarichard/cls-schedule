@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import {  useContext } from 'react'
+import {  useContext } from 'react';
 import { Students } from './components/Students';
 import { ThemeContext } from './context/ThemeContext.jsx';
 

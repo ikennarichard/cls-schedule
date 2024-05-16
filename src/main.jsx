@@ -21,8 +21,3 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     </Provider>
   </React.StrictMode>,
 )
-
-/**
- * Global state that is needed across the app should go in the Redux store. 
- * State that's only needed in one place should be kept in component state.
- */

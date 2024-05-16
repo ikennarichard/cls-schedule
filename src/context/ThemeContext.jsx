@@ -8,9 +8,9 @@ export const ThemeProvider = ({children}) => {
 
   const toggleTheme = () => {
     if (theme === 'dark') {
-      setTheme('light')
+      setTheme('light');
     } else {
-      setTheme('dark')
+      setTheme('dark');
     }
   }
 

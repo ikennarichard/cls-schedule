@@ -1,11 +1,12 @@
+* {
+  margin: 0;
+}
+
 .dark {
   background-color: darkslategray;
   color: white;
 }
 
-* {
-  margin: 0;
-}
 
 body {
   font-family: 'Roboto';
