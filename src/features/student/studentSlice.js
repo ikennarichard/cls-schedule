@@ -23,12 +23,8 @@ export const studentSlice = createSlice({
     }
 
   }
-})
+});
 
 export const { addSubject, removeSubject, selectMentor } = studentSlice.actions;
 
-export default studentSlice.reducer
-
-/**
- * A "slice" is a collection of Redux reducer logic and actions for a single feature in your app
- */
+export default studentSlice.reducer;
