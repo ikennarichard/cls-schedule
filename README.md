@@ -56,6 +56,12 @@ Our primary goal is to offer a seamless experience for students seeking efficien
   npm run dev
 ```
 
+* Run test:
+
+```sh
+  npm run test
+```
+
 ## Usage
 
 * Add a class mentor.
@@ -78,10 +84,15 @@ Room for improvement:
 
 ## Authors
 
-1. **Author**
+1. __Author__
 
 * [Richard](https://github.com/ikennarichard)
 
 ## License
 
 This project is open source and available under the [MIT](./LICENSE)
+
+## Test
+
+* Use Jest snapshots to test the components.
+* Use React Testing Library to simulate user interaction.

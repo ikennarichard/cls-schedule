@@ -61,6 +61,7 @@ export const Students = () => {
               variant="contained"
               color="error"
               disableElevation
+              data-testid={`delete-${s.subject.toLowerCase()}`}
             > 
               Remove <DeleteIcon style={{marginInlineStart: 5}}/>
             </Button>
@@ -71,10 +72,11 @@ export const Students = () => {
         <fieldset>
           <legend>Seelct Subjects and Mentor</legend>
           <div>
-            <label htmlFor="Grade">Mentor:</label>
+            <label htmlFor="mentor">Mentor:</label>
             <select
                 onChange={handleSelectMentor}
-                name='subject'
+                name='mentor'
+                id='mentor'
                 required
               >
                 <option value="">Select a mentor</option>
@@ -84,26 +86,28 @@ export const Students = () => {
               </select>
           </div>
           <div>
-              <label htmlFor="name">Subject:</label>
+              <label htmlFor="subject">Subject:</label>
               <select
                 onChange={handleChange}
                 name='subject'
                 value={student.subject || ''}
+                id='subject'
                 required
               >
                 <option value="">Select a subject</option>
                 <option value="Mathematics">Mathematics</option>
-                <option value="Science">Science</option>
+                <option data-testid="science" value="Science">Science</option>
                 <option value="History">History</option>
                 <option value="English">English</option>
                 <option value="Art">Art</option>
               </select>
           </div>
           <div>
-            <label htmlFor="Grade">Time:</label>
+            <label htmlFor="duration">Time:</label>
             <select
                 onChange={handleChange}
                 name='duration'
+                id='duration'
                 value={student.duration || ''}
                 required
               >
@@ -117,13 +121,10 @@ export const Students = () => {
           <Button 
             variant="outlined"
             type="submit"
+            data-testid="submit"
             disableElevation
             disableRipple
-            sx={{
-              "&:hover": {
-                border: "none"
-              }
-            }}
+            
           >
             Submit
           </Button>
@@ -132,8 +133,3 @@ export const Students = () => {
   </div>
   )
 }
-
-/**
- * useSelector takes care of talking to the Redux store behind the scenes for us. 
- * If we pass in a selector function, it calls someSelector(store.getState()) for us, and returns the result.
- */

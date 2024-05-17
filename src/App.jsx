@@ -3,7 +3,7 @@ import {  useContext } from 'react';
 import { Students } from './components/Students';
 import { ThemeContext } from './context/ThemeContext.jsx';
 
-function App() {
+export default function App() {
   const { theme } = useContext(ThemeContext)
 
   return (
@@ -12,5 +12,3 @@ function App() {
     </div>
   )
 }
-
-export default App
